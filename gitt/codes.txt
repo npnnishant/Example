@@ -1,0 +1,73 @@
+package bankapp;
+
+/**
+ *
+ * @author Aspire
+ */
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+
+public class Bankapp extends JFrame{
+      private   JPanel panel;
+      private JLabel title;
+      private JLabel name;
+      private JTextField uname;
+      private JLabel pass;
+      private JTextField password;
+      private JButton button;
+   
+    public Bankapp(){
+        
+        
+         panel= new JPanel();
+         panel.setLayout(new GridLayout(10,5,0,0));
+        //panel.setLayout(new FlowLayout());
+         //panel.setLayout(null);
+         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         panel.setBackground(Color.WHITE);
+         panel.setSize(810,650);
+         getContentPane().add(panel);
+        // pack();
+       
+        title= new JLabel("Welcome To Bank Of Northampton");
+        //title.setLocation(5,1);
+        panel.add(title);
+        
+        name= new JLabel("Username");
+        //name.setLocation(1,2);
+        panel.add(name);
+        
+        uname= new JTextField("");
+        //uname.setLocation(2,3);
+        uname.setSize(10,10);
+        panel.add(uname);
+        
+        pass= new JLabel("Password");
+        //pass.setLocation(3,3);
+        panel.add(pass);
+        
+        password= new JTextField("");
+      //  password.setLocation(1,4);
+        panel.add(password);
+        
+        
+        button = new JButton("Press");
+        panel.add(button); 
+        button.setLocation(3,5);
+       button.setSize(50,45);
+        
+    }
+     
+    public static void main(String[] args) {
+     Bankapp frame= new Bankapp();
+     frame.setSize(810,650);
+     frame.setVisible(true);
+     frame.setTitle("Bank Of Northampton");
+      frame.setResizable(false);
+     frame.setLocationRelativeTo(null);
+     
+   
+    }
+    
+}
